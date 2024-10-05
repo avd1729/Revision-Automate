@@ -1,2 +1,5 @@
 numpy
 pandas
+requests
+python-dotenv
+secure-smtplib
