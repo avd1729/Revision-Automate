@@ -3,9 +3,11 @@ from dotenv import load_dotenv
 
 
 class Config:
+
     """
     Config class to access the necessary global variables.
     """
+    
     def __init__(self):
         load_dotenv()
         self.EMAIL_ID = os.getenv("EMAIL_ID")
