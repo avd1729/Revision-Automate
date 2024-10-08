@@ -1,5 +1,8 @@
 import requests
 
+"""
+Client to interact with Notion API to fetch data from the integration
+"""
 class NotionClient:
     def __init__(self, notion_key):
         self.headers = {
@@ -7,7 +10,12 @@ class NotionClient:
             'Content-Type': 'application/json',
             'Notion-Version': '2022-06-28'
         }
-
+    """
+    Fetch all pages from the Notion workspace.
+        
+    Returns:
+        list: List of all page objects.
+    """
     def fetch_all_pages(self):
         all_results = []
         next_cursor = None

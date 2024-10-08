@@ -4,11 +4,24 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
 class AuthManager:
+    
+    """
+    Class to Authenticate the flow using OAuth.
+    """
+
     def __init__(self, config):
         self.config = config
         self.creds = None
-
+    
     def get_credentials(self):
+        
+        """
+        Authenticate using credentials.
+        
+        Returns:
+            creds : OAuth credentials.
+        """
+    
         if os.path.exists(self.config.TOKEN_FILE):
             self.creds = Credentials.from_authorized_user_file(self.config.TOKEN_FILE, self.config.SCOPES)
         
