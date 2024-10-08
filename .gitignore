@@ -4,3 +4,5 @@ venv
 secrets
 logs
 notebooks
+.idea
+__pycache__
