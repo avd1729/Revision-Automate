@@ -52,7 +52,7 @@ def main():
             problem_title = row['Problem Title']
             problem_url = row['URL']
             # Add the event to the calendar
-            calendar_service.add_event(problem_title, problem_url, event_date=test_date)
+            calendar_service.add_event(problem_title, problem_url)
     else:
         logger.info(f"No reminders for {test_date.strftime('%Y-%m-%d')}.")
 
