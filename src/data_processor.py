@@ -18,6 +18,8 @@ class DataProcessor:
             df (dataFrame) : A pandas dataFrame of the required attributes.
         """
         df = pd.DataFrame(notion_pages)
+        print("The total number of questions : ",len(df))
+        
         return pd.DataFrame({
             "Date": df["properties"].apply(lambda x: x["Date"]["date"]["start"] if x["Date"] and x["Date"]["date"] else None),
             "Problem Title": df["properties"].apply(lambda x: x["Problem"]["title"][0]["text"]["content"] if x["Problem"] and x["Problem"]["title"] else None),
