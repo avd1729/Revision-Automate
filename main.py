@@ -15,8 +15,6 @@ def main():
     logger = logger_manager.get_logger()
     logger.info("Application started.")
     
-    # Set the test date
-    # test_date = pd.to_datetime('2024-12-04')
     current_date = datetime.now().date()
     logger.info(f"Date set to {current_date.strftime('%Y-%m-%d')}")
 
