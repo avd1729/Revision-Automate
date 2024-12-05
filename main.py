@@ -6,7 +6,7 @@ from src.calendar_service import CalendarService
 from src.auth_manager import AuthManager
 from src.logger_manager import LoggerManager
 from datetime import datetime
-import pandas as pd
+# import pandas as pd
 
 def main():
 
